@@ -2,16 +2,16 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* prev = nullptr; // Nothing is behind the first node
-        ListNode* curr = head;    // Start at the beginning
-
+        ListNode* prev = nullptr; 
+        ListNode* curr = head;   
+        
         while (curr != nullptr) {
-            ListNode* nxt = curr->next; // Save the next node
-            curr->next = prev;          // Flip the arrow backward
-            prev = curr;                // Move prev forward
-            curr = nxt;                 // Move curr forward
+            ListNode* nxt = curr->next; 
+            curr->next = prev;          
+            prev = curr;                
+            curr = nxt;               
         }
 
-        return prev; // prev is now the new head
+        return prev;
     }
 };
